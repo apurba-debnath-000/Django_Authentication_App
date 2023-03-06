@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Home page {% endblock %}
+
+{% block body %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+    <div class="row">
+        <h2 class="display-3 mx-auto text-info mt-4" style="font-size: 40px;">Sign In Here: </h2>
+    </div>
+    <div class="row" >
+        
+        <div class="col-lg-6">
+            <img src="https://nordvpn.com/wp-content/uploads/blog-featured-nordvpn-login-and-sign-up-process-explained-1.svg" alt="">
+        </div>
+        <div class="col-lg-6">
+            <form action="" method="POST" class="form-control m-4 p-4" novalidate>
+                {% csrf_token %}
+    
+                {{form.as_p}}
+                <input type="submit" value="login" class="btn btn-info">
+                <a href="{% url 'password_reset' %}"><input type="button" value="forget password" class="btn btn-info"></a>
+    
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

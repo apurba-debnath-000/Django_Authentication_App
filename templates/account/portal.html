@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Home page {% endblock %}
+
+{% block body %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+    <div class="row mt-2" >
+        <h2 class="display-3 mx-auto text-info" style="font-size: 40px;">Welcome Student Portal </h2>
+        
+        <a href="{% url 'logout' %}"><input type="button" value="Logout" class="btn btn-info"></a>
+        
+    </div>
+    <div class="row">
+        <a href="{% url 'changePass' %}"><input type="button" value="Change password" class="btn btn-info"></a>
+
+    </div>
+</div>
+
+
+{% endblock %}

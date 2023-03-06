@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+{% block title %} Home page {% endblock %}
+
+{% block body %}
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+    <div class="row" >
+        <h2 class="lead text-info display-3 mt-4 mx-auto" style="font-size: 30px;" ><span class="text-warning">Logout</span> Successfully</h2>
+        
+        
+        
+    </div>
+    <div class="row">
+        <p class="lead mx-auto"> <span class="text-success">Thanks for spending some quality time</span> with the web site today.</p>
+        <br>
+    </div>
+    <div class="row">
+        <a href="{% url 'login' %}" class="mx-auto"><input type="button" value="Log in again" class="btn btn-info"></a>
+        
+    </div>
+</div>
+
+
+{% endblock %}
